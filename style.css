@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&family=JetBrains+Mono:wght@400;700&display=swap');
+
+/* Base Reset */
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #121212;
+    color: white;
+    overflow: hidden; /* Prevent body scroll, handle internally */
+    -webkit-tap-highlight-color: transparent;
+    margin: 0;
+    padding: 0;
+}
+
+/* Typography Utilities */
+.font-mono {
+    font-family: 'JetBrains Mono', monospace;
+}
+
+/* Animations */
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+@keyframes slideUp { from { transform: translateY(20px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
+@keyframes zoomIn { from { transform: scale(0.95); opacity: 0; } to { transform: scale(1); opacity: 1; } }
+@keyframes slideInRight { from { transform: translateX(20px); opacity: 0; } to { transform: translateX(0); opacity: 1; } }
+
+.animate-fade-in { animation: fadeIn 0.4s ease-out; }
+.animate-slide-up { animation: slideUp 0.4s ease-out; }
+.animate-zoom-in { animation: zoomIn 0.3s ease-out; }
+.animate-slide-right { animation: slideInRight 0.4s ease-out; }
+
+/* Scrollbar Styling */
+.custom-scrollbar::-webkit-scrollbar { width: 6px; }
+.custom-scrollbar::-webkit-scrollbar-track { background: #1a1a1a; }
+.custom-scrollbar::-webkit-scrollbar-thumb { background: #333; border-radius: 3px; }
+.custom-scrollbar::-webkit-scrollbar-thumb:hover { background: #dc2626; }
+
+/* Layout Helpers */
+.pb-safe { padding-bottom: env(safe-area-inset-bottom); }
+
+/* Interactive Elements */
+button:active { transform: scale(0.98); }
+input:focus, textarea:focus { outline: none; border-color: #dc2626; }
+
